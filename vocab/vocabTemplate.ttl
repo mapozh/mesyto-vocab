@@ -1,0 +1,17 @@
+@prefix mesyto: <https://w3id.org/mesyto/ontology#> .
+@prefix mesyto-vocab: <https://w3id.org/mesyto/vocab/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+mesyto:{{VOCAB_CLASS}}Concept a rdfs:Class ;
+    rdfs:label "{{VOCAB_LABEL}} concept"@en .
+
+mesyto-vocab:{{VOCAB_CLASS}} a skos:ConceptScheme ;
+    skos:prefLabel "{{VOCAB_LABEL}}"@en ;
+    dcterms:creator "MeSyTo" ;
+    dcterms:license <https://creativecommons.org/licenses/by/4.0/> ;
+    skos:hasTopConcept
+{{TOP_CONCEPTS}} .
+
+{{CONCEPT_BLOCKS}}
